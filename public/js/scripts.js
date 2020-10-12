@@ -55,42 +55,13 @@
     $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
 
-/*FONCTION QUI FAIT APPARAITRE UN MODAL
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+      $("#myModal").modal();
+    });
+  });
 
-const =document.getElementById("btnClose");
-const modal=document.getElementById("modal");
-const closeModal=document.getElementById("closemodal");
-btnClose.addEventListener('click',closePopup);             
-window.setTimeout(function()
+  $('.carousel').carousel({
+    interval: 2000
+  })
 
-{
-    
-modal.style.display="block";
-
-
- }, 3000);
- function closePopup(){
-    modal.style.display="none";
-
- }
- 
-
-*/
-
-/*
-
-window.setTimeout(function()
-
-{
-    
-    document.getElementById("text").style.visibility="hidden";
-
-
- }, 3000);
- 
-
- */
-
-
-
- 

@@ -52,7 +52,9 @@ class MessageController extends Controller
             'nom'=>'alpha|between:3,20|required',
             'email'=>'email|required',
             'message'=>'between:3,255|required',
-            'fonction'=>'between:3,50|required'
+            'fonction'=>'alpha|between:3,50|required',
+            
+            
         ]);
 
         if ($validator->fails()) {
@@ -69,6 +71,7 @@ class MessageController extends Controller
         $message->email=$request->input('email');
         $message->message=$request->input('message');
         $message->fonction=$request->input('fonction');
+        $message->published=$request->input('published') ? true : false;
         
        
         //image upload///
@@ -83,8 +86,12 @@ echo $pieces[1]; // piece2
 
         $message->save();
        /* session()->flash( 'message', " Votre message a bien été envoyé et publié !");*/
-
-    return redirect('/accueil') ->with('message', " Votre message a bien été envoyé et publié !"); 
+  if($message->published==true){
+    return redirect('/accueil') ->with('message', " Votre message a bien été envoyé et sera publié apres approbation!"); 
+  }else{
+    return redirect('/accueil') ->with('message', " Votre message a bien été envoyé "); 
+  }
+   
 
     }
 

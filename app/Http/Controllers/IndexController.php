@@ -21,8 +21,8 @@ class IndexController extends Controller
     }
 
     public function accueil () {
-           $messages=Message::orderBy('created_at','desc')
-           ->paginate(2);
+           $messages=Message::orderBy('created_at','desc');
+        
        
             $competences=Competence::all();
             $utilitaires=Utilitaire::all();

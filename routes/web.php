@@ -32,7 +32,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::resource('/message','MessageController');
 Route::post('/message','MessageController@store');
-Route::get('/message/create', 'MessageController@create');
+
 //////////////////////CV///////////////////
 
 

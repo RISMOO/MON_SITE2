@@ -19,8 +19,10 @@ class CreateMessagesTable extends Migration
             $table->string('email')->unique();
             $table->mediumText('message');
             $table->string('fonction');
-            $table->mediumText('photo');
+          
+            $table->boolean('published')->default(0);
             $table->timestamps();
+            
         });
     }
 
