@@ -15,30 +15,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'IndexController@index');
-Route::get('/accueil','IndexController@accueil');
-Route::get('/CoupDeCoeur','IndexController@CoupDeCoeur');
+///////////////WELCOME/////////////
+Route::get('/', function () {
+     return view('welcome');
+     });
 
-Auth::routes();
+////////MESSAGE/////////////////
+Route::resource('/accueil', 'IndexController');
+Route::post('/accueil','IndexController@store');
 
 
 
-
-Route::group(['prefix' => 'admin'], function () {
+///////VOYAGER//////////////////
+Route::group(['prefix' => 'momo'], function () {
     Voyager::routes();
 });
 
-////////////////message///////////////////
-
-Route::resource('/message','MessageController');
-Route::post('/message','MessageController@store');
-
-//////////////////////CV///////////////////
-
-
-
-
-
-/////////////////coupdecoeur////////////
-
+/////////////////HOME////////////
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
 

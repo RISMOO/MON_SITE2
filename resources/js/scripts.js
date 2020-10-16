@@ -66,3 +66,8 @@ $(document).ready(function(){
   })
 
 
+  $(document).ready(function(){
+    $("#con").click(function(){
+      $("#logs").modal();
+    });
+  });

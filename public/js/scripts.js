@@ -65,3 +65,8 @@ $(document).ready(function(){
     interval: 2000
   })
 
+  $(document).ready(function(){
+    $("#cont").click(function(){
+      $("#logs").modal();
+    });
+  });

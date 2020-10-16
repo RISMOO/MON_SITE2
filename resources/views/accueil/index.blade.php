@@ -7,30 +7,11 @@
 
 @section('content')
 
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger text-success" href="/"><i class="fa fa-power-off"></i></a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ml-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ml-auto">
-                        
-                        <li class="nav-item"><a class="js-scroll-trigger font-weight-normal text-success" href="#page-top"><i class="fa fa-home fa-2x"></i></a>
-                        <li class="nav-item"><a class="js-scroll-trigger font-weight-normal text-success" href="#services">A propos</a></li>
-                        <li class="nav-item"><a class="js-scroll-trigger font-weight-normal text-success" href="#portfolio">Projets</a></li>
-                        <li class="nav-item"><a class="js-scroll-trigger font-weight-normal text-success" href="#cv">CV</a></li>
-                        <li class="nav-item"><a class="js-scroll-trigger font-weight-normal text-success" href="#portfolio2">Syntheses</a></li>
-                        
-                        <li class="nav-item"><a class="js-scroll-trigger font-weight-bold text-success" href="#contact"><i class="fa fa-envelope fa-2x"></i></a>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-       
+
+    <!-- Navigation-->
+  
+    
+
         <!-- Masthead-->
         <header class="masthead" style="background-image: url('{{ asset('images/tree.jpg')}}')" id="fond" >
             
@@ -42,7 +23,7 @@
             <!-- Trigger the modal with a button -->
          
            </div>
-            <!-- Modal -->
+            <!-- Modal APROPOS-->
             <div class="modal fade" id="myModal" role="dialog">
               <div class="modal-dialog">
                 <a href="/accueil"><img class="rounded-circle mb-5" src="{{asset('images/moiprofil.jpg')}}"id="moiprofil" alt="avatar" /></a><br>
@@ -66,26 +47,153 @@
                 
               </div>
             </div> 
-         
-                <!-- Trigger the modal with a button -->
-              
+         <!---MODAL LOGIN-->
 
-               
-              
+         <div class="modal fade mt-5" id="logs" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
     
+                  <h3 class="text-dark">S'indentifier </h3>
+                  @include('inc.errorsuccess')
+                </div>
+                <div class="modal-body" style="padding:40px 50px;">
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
+                    <div class="form-group text-dark">
+                      <label for="email"><span class="glyphicon glyphicon-user"></span> Email</label>
+                      <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Entrez votre email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                      @error('email')
+                      <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                      </span>
+                  @enderror
+
+                    </div>
+                    <div class="form-group text-dark">
+                      <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Mot de passe</label>
                 
+                      <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Entrez votre mot de passe" required autocomplete="current-password" autofocus>
+                      
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}autofocus >
+
+                        <label class="form-check-label text-dark" for="remember">
+                            Se souvenir de moi
+                        </label>
+                    </div><br>
+                      <button type="submit" class="btn btn-success btn-block"><i class="fa fa-power-off"></i> Se connecter</button>
+                  </form>
+                </div>
+                @if (Route::has('password.request'))
+                <a class="btn btn-link text-danger" href="{{ route('password.request') }}">
+                    {{ __('Mot de passe oublié ?') }}
+                </a>
+            @endif
+                  <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Annuler</button>
+                 
+                
+              
+              </div>
+            </form>
+              
+            </div>
+          </div> 
+     
+        <section>
+
+            <div class="modal fade mt-5" id="reg" role="dialog">
+          
+                <div class="modal-dialog">
+            
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+
+                            <h3 class="text-dark">S'enregistrer</h3>
+                        
+                      </div>
+                      <div class="modal-body" style="padding:40px 50px;">
+                        <form method="POST" action="{{ route('register') }}">
+                            @csrf
+                            
+                            <div class="form-group text-dark">
+                                <label for="name"><span class="glyphicon glyphicon-user"></span>Nom</label>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Entrez votre Nom" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                              </div>
+
+                              <div class="form-group text-dark">
+                                <label for="email"><span class="glyphicon glyphicon-user"></span> Email</label>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Entrez votre email" value="{{ old('email') }}" required autocomplete="email"autofocus >
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+          
+                              </div>
+
+                              <div class="form-group text-dark">
+                                <label for="password"><span class="glyphicon glyphicon-user"></span>Password</label>
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Entrez votre mot de passe"  required autocomplete="new-password" autofocus>
+                               
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                              </div>
+                              <div class="form-group text-dark">
+                                <label for="password-confirm"><span class="glyphicon glyphicon-user"> Confirmer </label>
+    
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirmer votre mot de passe" required autocomplete="new-password"autofocus>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-block"><i class="fa fa-power-off"></i> S'enregistrer</button>
+                            
+                          </div>
+                         
+                            <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Annuler</button>
+
+                                   
+                             
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        </section>
+      
+        
+            
              
             
         </header><!--si j'ai un message-->
       
-       
+        @include('inc.errorsuccess')
          
         @if(session()->has('message'))
         <div class="alert alert-success text-center border" role="alert">
         {{session()->get('message')}}
         </div>
        @endif
-     
+
+      
+    
      
         <!-- Services-->
         <section class="page-section">
@@ -271,7 +379,7 @@
                                 
                               
                                 @foreach ($utilitaires as $utilitaire)
-                                {$utilitaire->nom}
+                                {{$utilitaire->nom}}
                                     <div class="progress">
     
                                     <div class="progress-bar" role="progressbar" aria-valuenow="{{$competence->lien}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$utilitaire->pourcentage}}%">
@@ -571,11 +679,59 @@
                     <div class="col-lg-4">
                         <div class="team-member">
                             
-                            <img class="mx-auto rounded-circle" id =guest src="{{asset('images/thank.png')}}" alt="" />
+                            <img class="mx-auto rounded-circle" id =guest src="{{asset('images/merci.jpg')}}" alt="" />
                             <h4>{{ucfirst($message->nom)}}</h4>
                             <p class="text-muted">{{ucfirst($message->fonction)}}</p>
                             <hr style="height:2px;border-width:0;color:gray;background-color:#e6b301">
-                            <p class="">{{ucfirst($message->message)}}</p>
+                          
+                            <small>Ecrit le {{$message->created_at}}</small><br>
+                         
+                            
+                            <a href="/accueil/{{$message->id}}"data-toggle="modal" data-target="#show">Lire la suite...</a><br>
+                           
+                            <a href="/accueil#contact"><button type="button" class="btn btn-outline-primary">Ecrire un nouveau message</button></a>
+
+                            <!--MODAL MESSAGE-->
+
+                            <!-- Modal -->
+  <div class="modal fade" id="show" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <img class="mx-auto rounded-circle" id =guest src="{{asset('images/merci.jpg')}}" alt="" />
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">{{ucfirst($message->nom)}}</h5><br>
+         
+        
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+     
+      
+        <p class="">{{ucfirst($message->message)}}</p>
+        <small>Ecrit le {{$message->created_at}}</small>
+        </div>
+        <div class="modal-footer">
+          
+          
+        
+    
+    <a href="/accueil/{{$message->id}}/edit"><button type="button" class="btn btn-success btn-block">Editer votre message</button></a>   
+{!! Form::open(['action'=>['IndexController@destroy',$message->id],'method'=>'POST']) !!}
+{{ Form::hidden('_method','DELETE')}}
+{{ Form::submit('Supprimer votre Message',['class'=>'btn btn-danger btn-block'] )}}
+{!! Form::close() !!}
+  
+
+      
+    </div>
+  </div>
+
+
+                            <!--END MODAL MESSAGE-->
+
                            
                         </div>
                     </div>
@@ -591,29 +747,45 @@
                 @include('inc.errorsuccess')
              
                 <div class="text-center">
+                    @if (Auth::guest())
                     <h2 class="section-heading text-uppercase"id="message" >Contactez-moi</h2>
-                    <h3 class="section-subheading text-warning">Laissez moi un message.</h3>
+                    <h3 class="section-subheading text-warning">Merci de vous connecter pour laisser un message !</h3>
+                    
+                        <!-- Authentication Links -->
+                   
+                        
+                        <div class="d-flex justify-content-center">
+
+                                <a href="{{ route('login') }}"style="text-decoration:overline;" data-toggle="modal" data-target="#logs">Se connecter</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                           
+                               
+                                    <a href="{{ route('register') }}"style="text-decoration:overline;"data-toggle="modal" data-target="#reg">S'enregistrer</a>
+                            
+                        </div>
+                         @endif
+                    
+                    @if (Auth::user())
+                    <h2 class="section-heading text-uppercase"id="message" >Message</h2>
                     <p class="text-warning text-right"> * champs obligatoires</p><br>
                 </div>
                
-                {!! Form::open(['action'=> 'MessageController@store','method'=>'POST','enctype'=>"multipart/form-data"]) !!}
+                {!! Form::open(['action'=> 'IndexController@store','method'=>'POST','enctype'=>"multipart/form-data"]) !!}
 
                 <div class="row contact-form-wrap justify-content-center">
-                    <div class="col-md-6 contact-name form-col">
-                      <h5 class="font-weight-normal text-warning">{{ Form::label('nom','Nom *')}}</h5>
-                            <h6 class="text-capitalize">{{Form::text('nom','',['class'=>'form-control','required','placeholder'=>'','onfocus'=>"placeholder",'onblur'=>'placeholder'])}}</h6>
-                    </div>
-                    <div class="col-md-6 contact-fonction form-col">
-                        <h5 class="font-weight-light text-warning"> {{Form::label('fonction','Fonction *')}}</h5>
-                        <h6 class="text-capitalize">{{Form::text('fonction','',['class'=>'form-control','required','placeholder'=>'','onfocus'=>'placeholder','onblur'=>'placeholder'])}}</h6>
+
+                    <div class="col-md-12 contact-fonction form-col">
+                        <h5 class="font-weight-light text-warning"> {{Form::label('nom','Nom*')}}</h5>
+                        <h6 class="text-capitalize">{{Form::text('nom','',['class'=>'form-control','required','placeholder'=>'votre nom','onfocus'=>'placeholder','onblur'=>'placeholder'])}}</h6>
 
                      </div>
 
-                    <div class="col-lg-12 contact-email form-col">
-                       <h5 class="font-weight-normal text-warning"> {{Form::label('email','Email *')}}</h5>
-                       <p>{{Form::text('email','',['class'=>'form-control','required','placeholder'=>'','onfocus'=>'placeholder','onblur'=>'placeholder'])}}</p>
 
-                    </div>
+                    <div class="col-md-12 contact-fonction form-col">
+                        <h5 class="font-weight-light text-warning"> {{Form::label('fonction','Fonction *')}}</h5>
+                        <h6 class="text-capitalize">{{Form::text('fonction','',['class'=>'form-control','required','placeholder'=>'votre fonction','onfocus'=>'placeholder','onblur'=>'placeholder'])}}</h6>
+
+                     </div>
+
                        <!--
                     <div class="col-lg-12 form-col"
                         <h5 class="font-weight-normal">{{Form::label('photo','Photo')}}</h5><br>
@@ -622,8 +794,8 @@
                      <br>
                      -->
                     <div class="col-lg-12">
-                        <h5 class="font-weight-normal text-warning">{{ Form::label('message','Message')}}</h5>
-                        <p class="text-capitalize">{{ Form::textarea('message','',['class'=>'form-control','required','placeholder'=>'','rows'=>'5','text'=>'capitalize','onfocus'=>'placeholder','onblur'=>'placeholder'])}}</a>
+                        <h5 class="font-weight-normal text-warning">{{ Form::label('message','Message *')}}</h5>
+                        <p class="text-capitalize">{{ Form::textarea('message','',['class'=>'form-control','required','placeholder'=>'Votre message','rows'=>'5','text'=>'capitalize','onfocus'=>'placeholder','onblur'=>'placeholder'])}}</a>
                             <h6 class="font-weight-light text-warning"> {{Form::label('afficher','Cochez, si vous souhaitez afficher votre message sur le site.')}}</h6>
                             <p>{{Form::checkbox('published','1',false,['class'=>'font-weight-bold','border'])}}</p>
                             
@@ -638,9 +810,9 @@
 
     {!! Form::close()!!}
 </div>
-
+@endif
             </div>
-            <p>* champs obligatoires</p>
+          
         </section>
               <!-- Modal 1-->
                    <!-- Portfolio Modals-->
