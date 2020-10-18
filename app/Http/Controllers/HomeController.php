@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Stage;
 use App\Message;
 use App\Formation;
@@ -22,6 +23,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        
     }
 
     /**
@@ -31,32 +33,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $user_id=auth()->user()->id;
+        $user=User::find($user_id);
+     
 
-        $messages=Message::orderBy('created_at','desc')
-        ->paginate(1);
+        return view ('home')->with('message', $user->message);
+
+
+
         
-       
-        $competences=Competence::all();
-        $utilitaires=Utilitaire::all();
-        $frameworks=Framework::all();
-        $transports=Transport::all();
-        $formations=Formation::all();
-        $stages=Stage::all();
-        $experiences=Experience::all();
-
-           return view ('accueil.index')->with(['competences'=>$competences,
-           'utilitaires'=>$utilitaires,
-           'frameworks'=>$frameworks,
-            'experiences'=>$experiences,
-           'transports'=>$transports,
-           'formations'=>$formations,
-           'stages'=>$stages,
-           'messages'=>$messages
-
-           ]);
-
-
-
-        return view('/accueil.index');
     }
 }

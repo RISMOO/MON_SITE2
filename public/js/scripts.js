@@ -70,3 +70,13 @@ $(document).ready(function(){
       $("#logs").modal();
     });
   });
+
+
+
+  $( "#regi" ).click(function() {
+    $( "#logs" ).hide(function() {
+      // Animation complete.
+    });
+  });
+
+  

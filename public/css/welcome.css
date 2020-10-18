@@ -10243,8 +10243,8 @@ header.masthead h1 {
 header {
   position: relative;
   background-color: black;
-  height: 100vh;
-  min-height: 25rem;
+
+
   width: 100%;
   overflow: hidden;
 

@@ -26,11 +26,10 @@
         <title>{{ config('app.name', 'MonSite') }}</title>
 
 </head>
-
 <body id="page-top">
     @include('inc.navbar')
 
-    @include('inc.errorsuccess')
+   
 
 
    @yield('content')

@@ -2099,13 +2099,13 @@ pre code {
 }
 .form-control:focus {
   color: #495057;
-  background-color: #fff;
+  background-color: rgb(14, 12, 12);
   border-color: #ffeeb5;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(254, 209, 54, 0.25);
 }
 .form-control::-webkit-input-placeholder {
-  color: #6c757d;
+  color: #6c757d9f;
   opacity: 1;
 }
 .form-control::-moz-placeholder {
@@ -2121,7 +2121,7 @@ pre code {
   opacity: 1;
 }
 .form-control::placeholder {
-  color: #6c757d;
+  color: #6c757d83;
   opacity: 1;
 }
 .form-control:disabled, .form-control[readonly] {
@@ -4904,6 +4904,8 @@ a.badge-dark:focus, a.badge-dark.focus {
 
   background-color: #0003076b;
   border-radius: 0.3rem;
+
+ 
 }
 @media (min-width: 576px) {
   .jumbotron {
@@ -5410,7 +5412,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 
 .close {
   float: right;
-  font-size: 1.5rem;
+  font-size: 2.0rem;
   font-weight: 700;
   line-height: 1;
   color: #000;
@@ -5560,17 +5562,58 @@ a.close.disabled {
 }
 
 .modal-content {
+
   position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: #fff;
+
+  background-color: rgb(0, 0, 0);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border: none;
+  margin-top:1%;
+  align-items: center;
+  box-shadow:0px 0px 6px white ;
+
+
+
+
+
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   outline: 0;
+
+
+
+
 }
+
+
+.modal-content1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+
+ 
+
+
+
+
+ 
+  border:none;
+ 
+
+  outline: 0;
+}
+
+
 
 .modal-backdrop {
   position: fixed;
@@ -10249,12 +10292,70 @@ height:5vh;
 
 }
 
-#fond1
+.mast 
 
 {
-height:100vh;
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
+
+  /*background-image: url("asset('images/fonds.jpg')");*/
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  height:5vh;
 
 }
+
+header.home {
+ 
+
+  /*background-image: url("asset('images/fonds.jpg')");*/
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  height:5vh;
+}
+header.home .home-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.home .home-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@media (min-width: 768px) {
+  header.home {
+    padding-top: 17rem;
+    padding-bottom: 12.5rem;
+  }
+  header.home .home-subheading {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  
+  }
+
+  
+  header.home .home-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
+}
+
 
 
 
@@ -10307,6 +10408,10 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
+
+
+
+
 
 #la, #blog, #calcul, #stage, #air, #site
 {
@@ -10730,12 +10835,12 @@ section#contact form#contactForm ::-webkit-input-placeholder {
 section#contact form#contactForm :-moz-placeholder {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
-  color: #ced4da;
+  color: #ced4daad;
 }
 section#contact form#contactForm ::-moz-placeholder {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
-  color: #ced4da;
+  color: #ffffff;
 }
 section#contact form#contactForm :-ms-input-placeholder {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

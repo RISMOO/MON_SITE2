@@ -57,6 +57,7 @@
 
 $(document).ready(function(){
     $("#myBtn").click(function(){
+        
       $("#myModal").modal();
     });
   });
@@ -66,8 +67,22 @@ $(document).ready(function(){
   })
 
 
-  $(document).ready(function(){
-    $("#con").click(function(){
-      $("#logs").modal();
+  
+  $(function(){
+      $("#myBtn").submit(function(){
+          alert("OK");
+          return false;
+      })
+  })
+
+
+function myFunction() {
+  document.getElementById("logs").style.display= "none";
+}
+
+$( "#regi" ).click(function() {
+    $( "#logs" ).show( "slow", function() {
+      // Animation complete.
     });
   });
+

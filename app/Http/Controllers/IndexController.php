@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Validator;
 
 class IndexController extends Controller
 {
+
+  public function __construct()
+    {
+      
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -66,25 +74,25 @@ class IndexController extends Controller
      */
     public function store(Request $request)
     {
-        /*
+        
         $this->validate($request,[
 
-            'nom'=>'alpha|between:3,20|required',
-            'email'=>'email|required',
+            /*nom'=>'alpha|between:3,20|required',*/
+           /* 'email'=>'email|required',*/
             'message'=>'between:3,255|required',
-            'fonction'=>'between:3,50|required'
+       
            
 
 
         ]);
 
-        */
+        
         $validator = Validator::make($request->all(), [
-            'nom'=>'alpha|between:3,20|required',
-           /* 'email'=>'email|required',*/
+            /*nom'=>'alpha|between:3,20|required',*/
+          /* 'email'=>'email|required',*/
             'message'=>'between:3,255|required',
-            'fonction'=>'string|between:3,50|required',
-            
+         
+          
             
         ]);
 
@@ -98,12 +106,12 @@ class IndexController extends Controller
 
 
         $message=new Message;
-        $message->nom=trim($request->input('nom'));
-      /*  $message->email=$request->input('email');*/
+        $message->nom=auth()->user()->name;
+      
         $message->message=$request->input('message');
-        $message->fonction=$request->input('fonction');
         $message->published=$request->input('published') ? true : false;
-        
+        $message->user_id=auth()->user()->id;
+     
        
         //image upload///
         // dd(Storage::url($message->photo));
@@ -116,11 +124,17 @@ echo $pieces[1]; // piece2
 
 
         $message->save();
+     
+
+
+
        /* session()->flash( 'message', " Votre message a bien été envoyé et publié !");*/
   if($message->published==true){
-    return redirect('/accueil') ->with('message', " Votre message a bien été envoyé et sera publié apres approbation!"); 
+ 
+    return redirect('/accueil') ->with('message',  " Votre message a bien été envoyé et sera publié apres approbation!"); 
   }else{
-    return redirect('/accueil') ->with('message', " Votre message a bien été envoyé "); 
+  
+    return redirect('/accueil') ->with('message', " Votre message a bien été envoyé et ne sera pas publié "); 
   }
    
 
@@ -148,6 +162,10 @@ echo $pieces[1]; // piece2
     public function edit($id)
     {
         $message=Message::find($id);
+
+        if(auth()->user()->id !== $message->user_id){
+          return redirect('/accueil')->with('error','Non autorisé');
+        }
         return view ('/accueil.edit')->with('message', $message);
     }
 
@@ -160,24 +178,24 @@ echo $pieces[1]; // piece2
      */
     public function update(Request $request, $id)
     {
-               /*
+               
         $this->validate($request,[
 
-            'nom'=>'alpha|between:3,20|required',
-            'email'=>'email|required',
-            'message'=>'between:3,255|required',
-            'fonction'=>'between:3,50|required'
+            /*'nom'=>'alpha|between:3,20|required',*/
+        /*  'email'=>'email|required',*/
+             'message'=>'between:3,255|required',
+            
            
 
 
         ]);
 
-        */
+        
         $validator = Validator::make($request->all(), [
-            'nom'=>'alpha|between:3,20|required',
+           /* 'nom'=>'alpha|between:3,20|required',*/
            /* 'email'=>'email|required',*/
             'message'=>'between:3,255|required',
-            'fonction'=>'string|between:3,50|required',
+          
             
             
         ]);
@@ -192,10 +210,10 @@ echo $pieces[1]; // piece2
 
 
         $message= Message::find($id);
-        $message->nom=trim($request->input('nom'));
+       /* $message->nom=trim($request->input('nom'));
       /*  $message->email=$request->input('email');*/
         $message->message=$request->input('message');
-        $message->fonction=$request->input('fonction');
+   
         $message->published=$request->input('published') ? true : false;
         
        
@@ -229,7 +247,9 @@ echo $pieces[1]; // piece2
     {
         $message= Message::find($id);
         $message->delete();
-
+        if(auth()->user()->id !== $message->user_id){
+          return redirect('/accueil')->with('error','Non autorisé');
+        }
         return redirect('/accueil') ->with('message', " Votre message a bien été supprimé "); 
     }
 }

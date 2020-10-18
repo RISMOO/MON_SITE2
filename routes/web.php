@@ -27,7 +27,7 @@ Route::post('/accueil','IndexController@store');
 
 
 ///////VOYAGER//////////////////
-Route::group(['prefix' => 'momo'], function () {
+Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 

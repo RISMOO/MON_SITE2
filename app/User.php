@@ -36,4 +36,15 @@ class User extends \TCG\Voyager\Models\User
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    
+        public function message(){
+    
+            return $this->hasmany('App\Message');
+            //chaque demande doit etre relié a notre utilisateur
+            // ici une chaque  demande appartient a un seul  utilisateur
+    }
+    
+
+
 }
