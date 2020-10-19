@@ -13,9 +13,30 @@
   </header>
 
    @if(count($message) > 0 )
-      
-          <h3 class="text-warning font-weight-light mb-3">Bonjour <span class="text-danger">{{ucfirst(Auth::user()->name)}}</span></h3>
-          <a href="#"><button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#mess" >Ecrire un nouveau message</button></a><br>
+
+<!----------------------MODAL ACCEUIL----------------------------------------------------------------------------------------->
+
+   <div class="modal fade mt-5" id="myHome" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+           
+          <h3 class="text-warning font-weight-light mb-3">Bonjour <span class="text-danger">{{ucfirst(Auth::user()->name)}}&nbsp;&nbsp;</span>
+               <button type="button" class="close text-warning font-weight-light" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4> Bienvenue sur votre dashboard</h4><hr>
+                  @if(count($message)>=1)
+                  <h6 class="text-center mb-2">Vous avez écrit &nbsp;<strong class="text-primary font-weight-bolder font-size-2rem">{{count($message)}}</strong>&nbsp;&nbsp;message{{ count($message) > 1 ? 's' : "" }}&nbsp;</h6>
+             @endif
+                </h3>
+              </div>
+            </div>
+         </div>
+   </div>
+      <!---------------------------------------------FIN MODAL ACCUEIL------------------------------------------------------------------------>
+        
+          <a href="#"><button type="button" class="btn btn-success mb-3" data-toggle="modal" id="acc" data-target="#mess" ><i class="fas fa-pencil-alt"></i> Ecrire un nouveau message</button></a><br>
 
      <!-----------------------------------------------------------------------------------FORMULAIRE MESSAGE MODAL--------------->
 
@@ -23,7 +44,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-body">
-            <h5 class="modal-title text-warning font-weight-light text-center mt-2 mb-3 " id="exampleModalLongTitle">Message
+            <h5 class="modal-title text-warning font-weight-light text-center mt-2 mb-3 " id="exampleModalLongTitle"><i class="fas fa-pencil-alt"></i>&nbsp;Message
                <button type="button" class="close text-warning font-weight-light" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                   </button>
@@ -42,7 +63,7 @@
                           <h6 class="font-weight-light text-warning"> {{Form::label('afficher','Cochez, si vous souhaitez afficher votre message sur le site.')}}</h6>
                            <p>{{Form::checkbox('published','1',false,['class'=>'font-weight-bold','border'])}}</p>  
                         </div>
-                           {!! Form::submit("Envoyer ",['class'=>'btn btn-success btn-block text-uppercase','value'=>'Envoyer','id'=>'sendMessageButton'])!!}
+                           {!! Form::button("<i class='fas fa-paper-plane'></i> Envoyer ",['class'=>'btn btn-success btn-block text-uppercase','value'=>'Envoyer','id'=>'sendMessageButton','type'=>'submit'])!!}
                      </div>
                    </div>
                  </div>
@@ -58,8 +79,8 @@
   
 <!-----------------------------------------------------FIN MODAL EDIT----------------------------------------------------------------------->
 <!------------------------------------------------------HISTORIQUE MESSAGES---------------------------------------------------------------->
-                    <h3 class="mt-2 font-weight-light"> Vos messages </h3>
-                      <table class="table table-striped">
+                 <div class="container">
+                      <table class="table table-striped mt-3">
                         <tr>
                          <th class="text-warning font-weight-light">Messages </th>
                            <th class="text-warning font-weight-light">Editer </th>
@@ -69,10 +90,10 @@
                            <tr>
                             <td class="text-success">{{$message->message}}<br>
                              <small class="text-light">{{$message->created_at}}</small></td>
-                              <td><a href="/accueil/{{$message->id}}/edit"><button type="button" class="btn btn-info">Editer</button></a></td>   
+                              <td><a href="/accueil/{{$message->id}}/edit"><button type="button" class="btn btn-info"><i class="fas fa-edit"></i> Editer</button></a></td>   
                                <td>{!! Form::open(['action'=>['IndexController@destroy',$message->id],'method'=>'POST']) !!}
                                    {{ Form::hidden('_method','DELETE')}}
-                                    {{ Form::submit('Supprimer',['class'=>'btn btn-danger'] )}}
+                                    {{ Form::button('<i class="fas fa-trash-alt"></i> Supprimer',['class'=>'btn btn-danger','type'=>'submit'] )}}
                                      {!! Form::close() !!}
                                        </td>        
                                       </tr>  
@@ -86,15 +107,28 @@
                      @else
                       <div class="container ">
                        
-                           <h3 class="text-warning font-weight-light mb-3">Bonjour <span class="text-success font-weight-bold">{{ucfirst(Auth::user()->name)}}</span></h3>
-                             <br>
-                              <h5 class="text-center mt- mb-5">Vous n'avez aucun message</h5>
-                                <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#mess" >Ecrire un message</button><br>
-                            </div>
-                           </div>
-                        @endif
+   <div class="modal fade mt-5" id="myHome" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+           
+          <h3 class="text-warning font-weight-light mb-3">Bonjour <span class="text-danger">{{ucfirst(Auth::user()->name)}}&nbsp;&nbsp;</span>
+               <button type="button" class="close text-warning font-weight-light" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+                <h4> Bienvenue sur votre dashboard</h4><hr>
+                  <h6 class="text-center mb-2">Vous avez écrit &nbsp;<strong class="text-primary font-weight-bolder font-size-2rem">{{count($message)}}</strong>&nbsp;&nbsp;message{{ count($message) > 1 ? 's' : "" }}&nbsp;</h6>
 
+         
+                </h3>
+              </div>
+            </div>
+         </div>
+   </div>
+   <!-------------------------------------------------------FIN MODAL SI AUCUN MESSAGE--------------------------------------->
 
+   <button type="button" class="btn btn-success mb-5" data-toggle="modal" id="ecrire" data-target="#mess" ><i class="fas fa-pencil-alt"></i> Ecrire un message</button><br>
+@endif
 
 
 <!-----------------------------------------------------DEBUT MODAL ECRIRE MESSAGE---------------------------------->       
@@ -104,7 +138,7 @@
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-body">
-                                  <h5 class="modal-title text-warning font-weight-light text-center mt-2 mb-3 " id="exampleModalLongTitle">Message
+                                  <h5 class="modal-title text-warning font-weight-light text-center mt-2 mb-3 " id="exampleModalLongTitle"><i class="fas fa-pencil-alt"></i>&nbsp;Message
                                      <button type="button" class="close font-weight-light text-warning" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                         </button>
@@ -123,7 +157,7 @@
                                                 <h6 class="font-weight-light text-warning"> {{Form::label('afficher','Cochez, si vous souhaitez afficher votre message sur le site.')}}</h6>
                                                  <p>{{Form::checkbox('published','1',false,['class'=>'font-weight-bold','border'])}}</p>  
                                               </div>
-                                                 {!! Form::submit("Envoyer ",['class'=>'btn btn-success btn-block text-uppercase','value'=>'Envoyer','id'=>'sendMessageButton'])!!}
+                                                 {!! Form::button("<i class='fas fa-paper-plane'></i> Envoyer ",['class'=>'btn btn-success btn-block text-uppercase','value'=>'Envoyer','id'=>'sendMessageButton','type'=>'submit'])!!}
                                            </div>
                                          </div>
                                        </div>

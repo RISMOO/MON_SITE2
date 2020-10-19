@@ -80,3 +80,12 @@ $(document).ready(function(){
   });
 
   
+
+  window.setTimeout(function () {
+    $("#myHome").modal("show");
+}, 1000);
+
+
+
+
+

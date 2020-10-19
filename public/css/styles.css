@@ -5561,6 +5561,13 @@ a.close.disabled {
   content: none;
 }
 
+.modal-content1
+
+{
+  border: none;
+ 
+
+}
 .modal-content {
 
   position: relative;

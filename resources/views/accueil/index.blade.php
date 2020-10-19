@@ -56,7 +56,7 @@
                             Se souvenir de moi
                         </label>
                     </div><br>
-                      <button type="submit" class="btn btn-success btn-block"><i class="fa fa-power-off"></i> Se connecter</button>
+                      <button type="submit" class="btn btn-success btn-block" data-toggle="modal" data-target="#profil" ><i class="fa fa-power-off"></i> Se connecter</button>
                   </form>
                 </div>
                 <a href="{{ route('register') }}"style="text-decoration:overline;" onclick="myFunction()" id="regi" data-toggle="modal" data-target="#reg" class="text-dark">S'enregistrer</a><br>           
@@ -72,6 +72,8 @@
             </div> 
     @endif
         </section>
+
+        
 
      <!---/////////////////////////////////// FIN MODAL LOGIN ///////////////////////////////////////////////////////////////--->
 
@@ -593,9 +595,9 @@
                             <a href="/accueil/{{$message->id}}"data-toggle="modal" data-target="#show">Lire la suite...</a>
                             <br>
                         @if(Auth::guest())
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#logs" >Ecrire un message</button>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#logs" ><i class="fas fa-pencil-alt"></i> un message</button>
                         @else
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#mess" >Ecrire un message</button>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#mess" ><i class="fas fa-pencil-alt"></i> Ecrire un message</button>
                         @endif
                             
                <!---////////////////////////////////////////////////////////////////////////// DEBUT MODAL SHOW///////////////////////////////////////////////////////////////--->
@@ -604,7 +606,7 @@
                           <div class="modal-content1">
                             <div class="modal-body">
                               <h5 class="modal-title text-success"  id="exampleModalLongTitle">{{ucfirst($message->nom)}}
-                                 <button type="button" class="close text-warning text-left" data-dismiss="modal" aria-label="Close">
+                                 <button type="button" class="close text-warning text-left font-weight-light" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
                                 </button>
                                </h5>
@@ -614,10 +616,10 @@
                        <!--  <a href="/accueil#contact"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#logs" >Ecrire un message</button></a>-->
                         @if (Auth::user())<!--on cache les boutton on utilisateur non inscrit -->
                         @if(Auth::user()->id == $message->user_id)<!--on cache aussi les boutton aux noms proprietaire de l'article-->
-                        <a href="#"><button type="button" class="btn btn-success btn-block" style="border:none;" data-toggle="modal" data-target="#edit">Editer votre message</button></a> <br>  
+                        <a href="#"><button type="button" class="btn btn-success btn-block" style="border:none;" data-toggle="modal" data-target="#edit"><i class="fas fa-edit"></i> Editer votre message</button></a> <br>  
                            {!! Form::open(['action'=>['IndexController@destroy',$message->id],'method'=>'POST']) !!}
                              {{ Form::hidden('_method','DELETE')}}
-                               {{ Form::submit('Supprimer votre Message',['class'=>'btn btn-danger btn-block font-weight-normal'] )}}
+                               {{ Form::button('<i class="fas fa-trash-alt"></i> Supprimer le message',['class'=>'btn btn-danger btn-block font-weight-normal','type'=>'submit'] )}}
                                 {!! Form::close() !!}
                             @endif
                               @endif
@@ -661,7 +663,7 @@
                       <div class="modal-dialog" role="document">
                          <div class="modal-content">
                             <div class="modal-body">
-                                    <h5 class="modal-title text-warning text-center font-weight-light mt-2 mb-5" id="exampleModalLongTitle">Message
+                                    <h5 class="modal-title text-warning text-center font-weight-light mt-2 mb-5" id="exampleModalLongTitle"><i class="fas fa-pencil-alt"></i>&nbsp;Message
                                     <button type="button" class="close text-warning font-weight-light" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                      </button>
@@ -680,7 +682,7 @@
                                      <h6 class="font-weight-light text-warning"> {{Form::label('afficher','Cochez, si vous souhaitez publier votre message sur le site.')}}</h6>
                                       <p>{{Form::checkbox('published','1',false,['class'=>'font-weight-bold','border'])}}</p>
                                   </div>
-                               {!! Form::submit("Envoyer ",['class'=>'btn btn-success btn-block text-uppercase','value'=>'Envoyer','id'=>'sendMessageButton'])!!}
+                               {!! Form::button("<i class='fas fa-paper-plane'></i> Envoyer ",['class'=>'btn btn-success btn-block text-uppercase','value'=>'Envoyer','id'=>'sendMessageButton','type'=>'submit'])!!}
                             </div>
                            </div>
                           </div>
@@ -695,11 +697,11 @@
 
          @if (Auth::user())
 
-                  <div class="modal fade mt-3" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                  <div class="modal fade mt-3 mb-2" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                    <div class="modal-dialog" role="document">
                      <div class="modal-content">
                        <div class="modal-body">
-                          <h5 class="modal-title text-warning text-center font-weight-light mt-2 mb-5 " id="exampleModalLongTitle">Message
+                          <h5 class="modal-title text-warning text-center font-weight-light mt-2 mb-5 " id="exampleModalLongTitle"><i class="fas fa-pencil-alt"></i>&nbsp; Message
                            <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
@@ -718,7 +720,7 @@
                        </div>
    
                          {{Form::hidden('_method','PUT')}}<!--mettre a jour avec la methode PUT-->
-                       <h6> {{Form::submit("Modifier votre message",['class'=>' btn btn-outline-success btn-block'])}}</h6>
+                       <h6> {{Form::button("<i class='fas fa-edit'></i> Modifier votre message",['class'=>' btn btn-success btn-block','type'=>'submit'])}}</h6>
                     </div>
                            </div>
                           </div>
