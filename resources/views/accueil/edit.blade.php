@@ -42,8 +42,6 @@
        
         {!! Form::open(['action'=> ['IndexController@update',$message->id],'method'=>'POST']) !!}
 
-        
-
                <!--
             <div class="col-lg-12 form-col"
                 <h5 class="font-weight-normal">{{Form::label('photo','Photo')}}</h5><br>

@@ -18,6 +18,7 @@ class CreateFormationsTable extends Migration
             $table->string('nom');
             $table->string('lieu');
             $table->string('date');
+            $table->string('image');
             $table->timestamps();
         });
     }

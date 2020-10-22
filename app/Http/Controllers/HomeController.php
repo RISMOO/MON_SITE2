@@ -11,6 +11,8 @@ use App\Transport;
 use App\Competence;
 use App\Experience;
 use App\Utilitaire;
+use App\Divers;
+
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -37,10 +39,15 @@ class HomeController extends Controller
         $user=User::find($user_id);
      
 
-        return view ('home')->with('message', $user->message);
+        return view ('home')->with('messages', $user->messages);
 
 
 
         
     }
+
+    
+
+
+    
 }

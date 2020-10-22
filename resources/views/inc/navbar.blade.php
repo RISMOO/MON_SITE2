@@ -11,10 +11,10 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase mr-5">
              
-              <li class="nav-item"><a class="nav-link js-scroll-trigger font-weight-light" href="/accueil#services">A propos</a></li>
-              <li class="nav-item"><a class="nav-link js-scroll-trigger font-weight-light" href="/accueil#portfolio">Mes projets</a></li>
-              <li class="nav-item"><a class="nav-link js-scroll-trigger font-weight-light " href="/accueil#team">Syntheses</a></li>
-              <li class="nav-item"><a class="nav-link js-scroll-trigger font-weight-light" href="/accueil#contact">Contact</a></li>
+              <li class="nav-item"><a class="nav-link js-scroll-trigger font-weight-bold text-light" href="/accueil#services">A propos</a></li>
+              <li class="nav-item"><a class="nav-link js-scroll-trigger font-weight-bold text-light" href="/accueil#portfolio">Mes projets</a></li>
+              <li class="nav-item"><a class="nav-link js-scroll-trigger font-weight-bold text-light" href="/accueil#team">Syntheses</a></li>
+              <li class="nav-item"><a class="nav-link js-scroll-trigger font-weight-bold text-light" href="/accueil#contact">Contact</a></li>
           </ul>
           <ul class="navbar-nav ml-auto">
 
@@ -22,11 +22,11 @@
               <!-- Authentication Links -->
               @guest
                   <li class="nav-item ">
-                      <a class="nav-link font-weight-light " href="{{ route('login') }}"  data-toggle="modal" data-target="#logs"><i class="fa fa-user"></i> Login</a>
+                      <a class="nav-link font-weight-bold text-danger  " href="{{ route('login') }}" id="connecter" data-toggle="modal" data-target="#logs"><i class="fa fa-user"></i> Login</a>
                   </li>
                   @if (Route::has('register'))
                       <li class="nav-item ">
-                          <a class="nav-link font-weight-light" href="{{ route('register') }}"data-toggle="modal" data-target="#reg"><i class="fa fa-sign-out-alt"></i> Register</a>
+                          <a class="nav-link font-weight-bold text-danger" href="{{ route('register') }}" id="enregistrer" data-toggle="modal" data-target="#reg"><i class="fa fa-sign-out-alt"></i> Register</a>
                       </li>
                   @endif
               @else

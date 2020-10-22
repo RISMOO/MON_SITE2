@@ -76,35 +76,67 @@ body {
 color: var(--red);
 
 }
-.fa-sign-out-alt
+.fa-home
 {
-  color:var(--success) ;
+  color:rgba(178, 190, 10, 0.938) ;
 }
 
 .fa-user
 
 {
-color:var(--success);
+color:rgb(255, 255, 255);
 
 }
 
-.fa-home
+.fa-sign-out-alt
 
 {
 
-  color:var(--success);
+
+
+  color:rgb(192, 11, 11);
 }
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.text-danger
+{
+  text-shadow: 0px 0px 10px black;
+}
+
+
 .ap 
 {
-margin-top: 15%;
+margin-top: 2%;
 color: #000;
+
 }
 
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
+
+.text-light
+
+{
+
+  text-shadow:0px 0px 20px black ;
+}
+
 #moi, #guest
+
+{
+min-width: 70px;
+min-height: 70px;
+max-width: 70px;
+max-height: 70px;
+box-shadow:0px 0px 10px black;
+margin-top: 2%;
+}
+#thierry, #mickael
 
 {
 min-width: 70px;
@@ -116,22 +148,33 @@ margin-top: 2%;
 
 
 
+
+
+}
+
+
+.background
+
+{
+background-color: rgba(0, 0, 0, 0.74);
+
 }
 .example_d {
-  color: #20bf6b !important;
+  color: #ecc100!important;
   text-transform: uppercase;
-  background: #ffffff;
+  background: #020202d7;
   padding: 20px;
-  border: 4px solid #20bf6b !important;
-  border-radius: 6px;
+  border-radius: 10px;
+  border-color: rgb(226, 226, 226) !important;
   display: inline-block;
   transition: all 0.3s ease 0s;
+  font-size:20px ;
   }
 
   .example_d:hover {
-    color: #494949 !important;
+    color: #f8f8f8 !important;
     border-radius: 50px;
-    border-color: #494949 !important;
+    border-color: green !important;
     transition: all 0.3s ease 0s;
     cursor:pointer;
     }
@@ -177,6 +220,34 @@ abbr[data-original-title] {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
 }
+#competences
+
+{
+
+  cursor: pointer;
+}
+
+#formations
+
+{
+
+  cursor: pointer;
+}
+
+#softskills
+
+{
+
+  cursor: pointer;
+}
+
+#expe
+
+{
+
+  cursor: pointer;
+}
+
 
 address {
   margin-bottom: 1rem;
@@ -2077,10 +2148,10 @@ pre code {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
+  color: #fdfdfd80;
+  background-color: rgb(255, 255, 255);
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: none;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2099,7 +2170,7 @@ pre code {
 }
 .form-control:focus {
   color: #495057;
-  background-color: rgb(14, 12, 12);
+  background-color: rgb(250, 249, 249);
   border-color: #ffeeb5;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(254, 209, 54, 0.25);
@@ -2610,8 +2681,8 @@ fieldset:disabled a.btn {
 
 .btn-success {
   color: #fff;
-  background-color: #28a745;
-  border-color: #28a745;
+  background-color: #28a74667;
+  border-color:none;
 }
 .btn-success:hover {
   color: #fff;
@@ -2638,11 +2709,56 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
 }
 
+.btn-success1 {
+  color: #fff;
+  background-color: #014210e3;
+  border-color:none;
+}
+.btn-success1:hover {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+.btn-success1:focus, .btn-success.focus {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+}
+.btn-success1.disabled, .btn-success:disabled {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+.btn-success1:not(:disabled):not(.disabled):active, .btn-success1:not(:disabled):not(.disabled).active, .show > .btn-success1.dropdown-toggle {
+  color: #fff;
+  background-color: #1e7e34;
+  border-color: #1c7430;
+}
+.btn-success1:not(:disabled):not(.disabled):active:focus, .btn-success1:not(:disabled):not(.disabled).active:focus, .show > .btn-success1.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+}
+
+
 .btn-info {
   color: #fff;
-  background-color: #17a2b8;
-  border-color: #17a2b8;
+  background-color: #00444ee5;
+  border-color: none;
 }
+
+#myHome
+{
+margin-top: 50%;
+
+}
+
+#myModal
+
+{
+ box-shadow: 0px 0px 10px black;
+
+}
+
 .btn-info:hover {
   color: #fff;
   background-color: #138496;
@@ -2670,7 +2786,7 @@ fieldset:disabled a.btn {
 
 .btn-warning {
   color: #fff;
-  background-color: #fed136;
+  background-color: #fed336a6;
   border-color: #fed136;
 }
 .btn-warning:hover {
@@ -2700,8 +2816,8 @@ fieldset:disabled a.btn {
 
 .btn-danger {
   color: #fff;
-  background-color: #dc3545;
-  border-color: #dc3545;
+  background-color: #7a0410de;
+  border-color: none;
 }
 .btn-danger:hover {
   color: #fff;
@@ -2864,7 +2980,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-info {
-  color: #17a2b8;
+  color: #17a3b870;
   border-color: #17a2b8;
 }
 .btn-outline-info:hover {
@@ -4020,7 +4136,7 @@ input[type=button].btn-block {
 }
 .nav-tabs .nav-link.disabled {
   color: #6c757d;
-  background-color: transparent;
+  background-color: black;
   border-color: transparent;
 
 }
@@ -4071,6 +4187,7 @@ input[type=button].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  
 }
 .navbar .container,
 .navbar .container-fluid,
@@ -4129,7 +4246,7 @@ input[type=button].btn-block {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
-  background-color: transparent;
+  background-color:black;
   border: 1px solid transparent;
   border-radius: 0.25rem;
 
@@ -5497,7 +5614,13 @@ a.close.disabled {
   overflow: hidden;
   outline: 0;
 }
+.m
 
+{
+
+  background-color: rgba(0, 0, 0, 0.678);
+ 
+}
 .modal-dialog {
   position: relative;
   width: auto;
@@ -5525,6 +5648,10 @@ a.close.disabled {
   max-height: calc(100% - 1rem);
 }
 .modal-dialog-scrollable .modal-content {
+  max-height: calc(100vh - 1rem);
+  overflow: hidden;
+}
+.modal-dialog-scrollable .modal-content2 {
   max-height: calc(100vh - 1rem);
   overflow: hidden;
 }
@@ -5557,6 +5684,9 @@ a.close.disabled {
 .modal-dialog-centered.modal-dialog-scrollable .modal-content {
   max-height: none;
 }
+.modal-dialog-centered.modal-dialog-scrollable .modal-content2 {
+  max-height: none;
+}
 .modal-dialog-centered.modal-dialog-scrollable::before {
   content: none;
 }
@@ -5565,9 +5695,20 @@ a.close.disabled {
 
 {
   border: none;
- 
 
+  
 }
+
+.modal-content0
+
+{
+  border: none;
+  box-shadow:0px 0px 15px rgba(255, 255, 255, 0.486) ;
+  
+}
+
+
+
 .modal-content {
 
   position: relative;
@@ -5575,8 +5716,63 @@ a.close.disabled {
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
+  background-color:rgba(255, 255, 255, 0.959) ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border: none;
+  margin-top:1%;
+  align-items: center;
+ 
+  background-clip: padding-box;
 
-  background-color: rgb(0, 0, 0);
+
+  outline: 0;
+ 
+
+
+
+
+}
+
+
+#myBtn {
+  color:red; 
+  animation: colorblink 2s infinite;
+}
+@keyframes colorblink { 
+0% { }
+50% { color:green; } 
+}
+
+
+
+
+
+
+
+
+#counter
+
+{
+
+  font-size: 1em;
+  margin: 0;
+  filter: blur(32px);
+  transform: 200ms;
+  color: white;
+ 
+}
+
+.modal-content2 {
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: rgba(255, 255, 255, 0.685);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -5585,10 +5781,6 @@ a.close.disabled {
   margin-top:1%;
   align-items: center;
   box-shadow:0px 0px 6px white ;
-
-
-
-
 
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -5607,20 +5799,23 @@ a.close.disabled {
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-
- 
-
-
-
-
  
   border:none;
- 
-
   outline: 0;
 }
 
+.modal-content0 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+ 
+  border:none;
+  outline: 0;
+}
 
+.mas
 
 .modal-backdrop {
   position: fixed;
@@ -5635,7 +5830,7 @@ a.close.disabled {
   opacity: 0;
 }
 .modal-backdrop.show {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .modal-header {
@@ -5698,6 +5893,9 @@ a.close.disabled {
     max-height: calc(100vh - 3.5rem);
   }
 
+ .modal-dialog-scrollable .modal-content2 {
+    max-height: calc(100vh - 3.5rem);
+  }
   .modal-dialog-centered {
     min-height: calc(100% - 3.5rem);
   }
@@ -10142,6 +10340,7 @@ h3 {
 }
 body {
   overflow-x: hidden;
+ 
 }
 
 p {
@@ -10295,7 +10494,7 @@ img::-moz-selection {
 #fond
 
 {
-height:5vh;
+height:20vh;
 
 }
 
@@ -10312,7 +10511,7 @@ height:5vh;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  height:5vh;
+  height:2vh;
 
 }
 
@@ -10372,12 +10571,16 @@ header.masthead {
   text-align: center;
   color: #fff;
 
-  /*background-image: url("asset('images/fonds.jpg')");*/
+  background-image: url('/images/fonds.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  height:5vh;
+
+  height:100vh;
+
+
+ 
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
@@ -10486,11 +10689,28 @@ header.masthead .masthead-heading {
   padding-bottom: 6rem;
   text-align: center;
 }
+.portfolio-modal .modal-content2 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  text-align: center;
+}
 .portfolio-modal .modal-content h2 {
   font-size: 3rem;
   line-height: 3rem;
+
 }
+
+.portfolio-modal .modal-content2 h2 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
 .portfolio-modal .modal-content p.item-intro {
+  font-style: italic;
+  margin-bottom: 2rem;
+  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.portfolio-modal .modal-content2 p.item-intro {
   font-style: italic;
   margin-bottom: 2rem;
   font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10498,10 +10718,20 @@ header.masthead .masthead-heading {
 .portfolio-modal .modal-content p {
   margin-bottom: 2rem;
 }
+.portfolio-modal .modal-content2 p {
+  margin-bottom: 2rem;
+}
 .portfolio-modal .modal-content ul.list-inline {
   margin-bottom: 2rem;
 }
+.portfolio-modal .modal-content2 ul.list-inline {
+  margin-bottom: 2rem;
+}
+
 .portfolio-modal .modal-content img {
+  margin-bottom: 2rem;
+}
+.portfolio-modal .modal-content2 img {
   margin-bottom: 2rem;
 }
 .portfolio-modal .close-modal {
@@ -10513,6 +10743,16 @@ header.masthead .masthead-heading {
   cursor: pointer;
   background-color: transparent;
 }
+.portfolio-modal .close-modal {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+
 .portfolio-modal .close-modal:hover {
   opacity: 0.3;
 }
@@ -10576,11 +10816,25 @@ header.masthead .masthead-heading {
   padding-bottom: 6rem;
   text-align: center;
 }
+.portfolio-modal .modal-content2 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  text-align: center;
+}
 .portfolio-modal .modal-content h2 {
   font-size: 3rem;
   line-height: 3rem;
+}.portfolio-modal .modal-content2 h2 {
+  font-size: 3rem;
+  line-height: 3rem;
 }
+
 .portfolio-modal .modal-content p.item-intro {
+  font-style: italic;
+  margin-bottom: 2rem;
+  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.portfolio-modal .modal-content2 p.item-intro {
   font-style: italic;
   margin-bottom: 2rem;
   font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10588,10 +10842,19 @@ header.masthead .masthead-heading {
 .portfolio-modal .modal-content p {
   margin-bottom: 2rem;
 }
-.portfolio-modal .modal-content ul.list-inline {
+.portfolio-modal .modal-content2 p {
   margin-bottom: 2rem;
 }
+.portfolio-modal .modal-content ul.list-inline {
+  margin-bottom: 2rem;
+}.portfolio-modal .modal-content2 ul.list-inline {
+  margin-bottom: 2rem;
+}
+
 .portfolio-modal .modal-content img {
+  margin-bottom: 2rem;
+}
+.portfolio-modal .modal-content2 img {
   margin-bottom: 2rem;
 }
 .portfolio-modal .close-modal {
@@ -10604,7 +10867,7 @@ header.masthead .masthead-heading {
   background-color: transparent;
 }
 .portfolio-modal .close-modal:hover {
-  opacity: 0.3;
+  opacity: 1;
 }
 
 

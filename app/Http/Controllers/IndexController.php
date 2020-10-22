@@ -1,11 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Cv;
+use App\Auto;
+use App\Autre;
 use App\Stage;
 use App\Message;
 use App\Formation;
 use App\Framework;
 use App\Transport;
+
+
 use App\Competence;
 use App\Experience;
 use App\Utilitaire;
@@ -41,6 +47,11 @@ class IndexController extends Controller
          $formations=Formation::all();
          $stages=Stage::all();
          $experiences=Experience::all();
+         $autos=Auto::all();
+         $cvs=Cv::all();
+         $autres=Autre::all();
+         
+         
  
             return view ('accueil.index')->with(['competences'=>$competences,
             'utilitaires'=>$utilitaires,
@@ -49,7 +60,12 @@ class IndexController extends Controller
             'transports'=>$transports,
             'formations'=>$formations,
             'stages'=>$stages,
-            'messages'=>$messages
+            'messages'=>$messages,
+            'autos'=>$autos,
+            'cvs'=>$cvs,
+            'autres'=>$autres
+            
+            
  
             ]);
 
@@ -232,7 +248,7 @@ echo $pieces[1]; // piece2
   if($message->published==true){
     return redirect('/accueil') ->with('message', " Votre message a bien été modifié et sera publié apres approbation!"); 
   }else{
-    return redirect('/accueil') ->with('message', " Votre message a bien été modifié "); 
+    return redirect('/accueil') ->with('message', " Votre message a bien été modifié et ne sera pas publié"); 
   }
     
     }

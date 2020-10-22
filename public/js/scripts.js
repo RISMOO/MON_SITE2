@@ -54,16 +54,31 @@
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
+//////ACCUEIL PROFIL
+$(document).on("ready", () => {
+  
 
-$(document).ready(function(){
-    $("#myBtn").click(function(){
-      $("#myModal").modal();
+    $("#edit2").on("click", function(){
+      $("#edit").modal();
     });
   });
+  
+  $(document).on("ready", function(){
+    $("#edit2").on("click", function(){
+      $("#edit").modal();
+    });
+  });
+ 
 
   $('.carousel').carousel({
     interval: 2000
   })
+
+  $(document).ready(function(){
+    $("#cont").click(function(){
+      $("#logs").modal();
+    });
+  });
 
   $(document).ready(function(){
     $("#cont").click(function(){
@@ -80,12 +95,224 @@ $(document).ready(function(){
   });
 
   
-
+//////ACCEUIL DASBOARD///////////
   window.setTimeout(function () {
     $("#myHome").modal("show");
+    
 }, 1000);
 
+$("#myBtn").on('click',() => {
+  $("#myModal").modal();
+});
 
+
+
+
+$( "#hide" ).click(function() {
+    $( "#tab" ).hide(function() {
+      // Animation complete.
+    });
+  });
+
+
+$( "#clos" ).click(function() {
+    $( "#tab" ).show(function() {
+    });
+    
+  });
+
+
+  $( "#clos" ).click(function() {
+    $( "#tab" ).show(function() {
+
+    });
+    
+  });
+ 
+
+  $('#formation').click(function(){
+    $('#formation1').show(1000, function(){
+
+    });
+  });
+
+  $('#exp').click(function(){
+    $('#exp1').show(1000, function(){
+
+    });
+  });
+
+  $('#soft').click(function(){
+    $('#soft1').show(1000, function(){
+
+    });
+  });
+
+  $('#com').click(function(){
+    $('#com1').show(1000, function(){
+
+    });
+  });
+
+  $('#exp').click(function(){
+    $('#exp1').show(1000, function(){
+
+    });
+  });
+
+
+  //Affiche tableau sur le dashboard
+
+  $( "#afficheTab" ).click(function() {
+    $( "#tab" ).show(function() {
+      // Animation complete.
+    });
+  });
+
+ 
+
+
+  $( "#cacheEdit" ).click(function() {
+    $( "#show" ).hide(function() {
+      // Animation complete.
+    });
+  });
+
+  $( "#openEdit" ).click(function() {
+    $( "#show" ).show(function() {
+      // Animation complete.
+    });
+  });
+
+ 
+  $( "#afficheTab" ).click(function() {
+    $( "#affi" ).show(function() {
+     
+    });
+  });
+
+ 
+   //SECTION MESSAGES//////////////////
+  $('#moi').click(function(){
+    $('#ris').show(1000, function(){
+
+    });
+  });
+
+  $('#mickael').on('click',() =>{
+    $('#mic').show(1000, function(){
+
+    });
+  });
+
+  $('#thierry').on('click',() =>{
+    $('#th').show(1000,() =>{
+
+    });
+  });
+
+
+$( "#afficheBoutton" ).click(function() {
+    $( "#hide" ).hide(function() {
+      // Animation complete.
+    });
+  });
+
+  $( ".btn-info" ).click(function() {
+    $( "#tab" ).hide(function() {
+      // Animation complete.
+    });
+  });
+  $( '#openEdit' ).click(function() {
+    $( "#tab" ).show(function() {
+      // Animation complete.
+    });
+  });
+
+
+
+  //BOUTON MESSAGE //
+
+  $( "#voir" ).on('click',function() {
+    $( "#boutonEcrireMessage" ).show(function() {
+      
+      // Animation complete.
+    });
+  });
+
+///EDIT HOME
+$(function() {
+for( let i in messages){
+  console.log("#voirEdit" + messages[i].id);
+  
+    $("#voirEdit" + messages[i].id).on("click", () => {
+      $("#edit" + messages[i].id).modal();
+    });
+}
+});
+
+
+$(document).ready(function(){
+  $("#connecter").click(function(){
+    $(".modal").addClass(".modal");
+  
+  });
+});
+
+
+
+
+const myBtn= document.getElementById("myBtn");
+
+window.setTimeout(function()
+{
+   
+    myBtn.style.display = "block";
+  
+ }, 1000)
+
+
+
+ $( '#openEdit' ).click(function() {
+  $( "#tab" ).show(function() {
+    // Animation complete.
+  });
+});
+
+
+
+$( '#propos' ).click(function() {
+  $( "#myModal2" ).show(function() {
+    // Animation complete.
+  });
+});
+
+$('#competences').on('click',() =>{
+  $('#competencebar').toggle(1500,() =>{
+  
+  });
+});
+
+$('#softskills').on('click',() =>{
+  $('#carousel').show(1500,() =>{
+  
+  });
+});
+
+
+
+$('#expe').on('click',() =>{
+  $('#expe1').toggle(1500,() =>{
+  
+  });
+});
+
+
+$('#formations').on('click',() =>{
+  $('#forma1').toggle(1500,() =>{
+  
+  });
+});
 
 
 

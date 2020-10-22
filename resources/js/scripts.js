@@ -86,3 +86,15 @@ $( "#regi" ).click(function() {
     });
   });
 
+  $(document).ready(function(){
+    $("#hide").click(function(){
+        
+      $("#tab").container();
+    });
+  });
+
+  $('#moip').click(function(){
+    $('#').hide(1000, function(){
+      alert("j'ai faim");
+    });
+  });

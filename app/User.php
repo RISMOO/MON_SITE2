@@ -38,7 +38,7 @@ class User extends \TCG\Voyager\Models\User
     ];
 
     
-        public function message(){
+        public function messages(){
     
             return $this->hasmany('App\Message');
             //chaque demande doit etre relié a notre utilisateur
