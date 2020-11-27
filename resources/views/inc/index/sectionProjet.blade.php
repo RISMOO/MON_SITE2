@@ -90,6 +90,21 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-lg-4 col-sm-6 mt-2">
+                <div class="portfolio-item border">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal7">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fab fa-vuejs fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="{{asset('images/movies.png')}}" alt="" />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading"><i class="fa fa-quote-left text-warning"></i> Movies</div>
+                        <div class="portfolio-caption-subheading text-muted">Vuejs</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

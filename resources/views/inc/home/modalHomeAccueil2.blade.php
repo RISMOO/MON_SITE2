@@ -1,6 +1,6 @@
 
 <div class="container">
- 
+
 <div class="modal fade mt-5" id="myHome" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
 <div class="modal-dialog" role="document">
 <div class="modal-content0">
@@ -12,7 +12,7 @@
 </button>
 
 <h4 class="text-light font-weight-light"> Bienvenue sur votre dashboard</h4><hr>
-<h6 class="text-center text-light mb-2">Vous avez écrit &nbsp;<strong class="text-primary font-weight-bolder font-size-2rem">{{count($messages)}}</strong>&nbsp;&nbsp;message{{ count($message) > 1 ? 's' : "" }}&nbsp;</h6>
+<h6 class="text-center text-light mb-2">Vous n'avez aucun message &nbsp;<strong class="text-primary font-weight-bolder font-size-2rem">&nbsp;</h6>
 
 
 </h3>
@@ -23,4 +23,4 @@
 <!-------------------------------------------------------FIN MODAL SI AUCUN MESSAGE--------------------------------------->
 <a href="#"><button type="button" class="btn btn-success1 mb-3" data-toggle="modal" id="hide" data-target="#mess" ><i class="fas fa-pencil-alt"></i> Ecrire message</button></a><br>
 
-
+</div>

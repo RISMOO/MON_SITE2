@@ -7,14 +7,14 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                              
+
                                 <h2 class="text-uppercase">Blog</h2>
                                 <p class="item-intro text-muted">Projet réalisés en vue.js.</p>
                                 <img class="img-fluid d-block mx-auto" id="blog" src="{{asset('images/single.png')}}" alt="" />
                                 <p>Réalisation d'une application front-end <strong class="text-success">Vue.js</strong> avec vue-cli. </p>
                                 <ul class="list-inline">
                                     <li>Date: Aout 2020</li>
-                                   
+
                                     <li>Category: Front-end</li>
                                 </ul>
                                 <a target="_blank" href="https://rismo.fr/apps/blog2"class="text-success">
@@ -37,7 +37,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                               
+
                                 <h2 class="text-uppercase">Lafleur</h2>
                                 <p class="item-intro text-muted">Projet réalisé en php.</p>
                                 <img class="img-fluid d-block mx-auto" id="la" src="{{asset('images/lafleur1.png')}}" alt="" />
@@ -72,7 +72,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                               
+
                                 <h2 class="text-uppercase">Air</h2>
                                 <p class="item-intro text-muted">Projet réalisé en Vue.js.</p>
                                 <img class="img-fluid d-block mx-auto" id='air' src="{{asset('images/air.png')}}" alt="" />
@@ -98,7 +98,7 @@
             </div>
         </div>
     </div>
-  
+
     <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -107,7 +107,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                          
+
                                 <h2 class="text-uppercase">Mon site</h2>
                                 <p class="item-intro text-muted">Création de mon site en laravel.</p>
                                 <img class="img-fluid d-block mx-auto" id="site" src="{{asset('images/rismo.fr.png')}}" alt="" />
@@ -141,7 +141,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                              
+
                                 <h2 class="text-uppercase">Calculateur</h2>
                                 <p class="item-intro text-muted">Création d'une application vue.js</p>
                                 <img class="img-fluid d-block mx-auto" id="calcul" src="{{asset('images/calcul.png')}}" alt="" />
@@ -167,6 +167,40 @@
             </div>
         </div>
     </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal"><img src="{{asset('img/close-icon.svg')}}" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+
+                                <h2 class="text-uppercase">Movies</h2>
+                                <p class="item-intro text-muted">Création d'une application en vuejs</p>
+                                <img class="img-fluid d-block mx-auto" id="site" src="{{asset('images/movies.png')}}" alt="" />
+                                <p>Création d'une application statique en vuejs avec Vuex et un deployement sur netlify </p>
+                                <ul class="list-inline">
+                                    <li>Date: Nov 2020</li>
+                                    <li>Client: auto-formation UDEMY</li>
+                                    <li>Category: VuJs</li>
+                                </ul>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                <a target="_blank" href="https://my-app-movies.netlify.app"class="text-success">
+                                    <i class="fa fa-chevron-right"></i>
+                                    VOIR LE PROJET
+                                    <i class="fa fa-chevron-left"></i>
+                                 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -175,7 +209,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                               
+
                                 <h2 class="text-uppercase">Stage</h2>
                                 <p class="item-intro text-muted">Projet réalisé en Laravel</p>
                                 <img class="img-fluid d-block mx-auto" id="stage" src="{{asset('images/imt1.png')}}" alt="" />

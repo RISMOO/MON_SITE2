@@ -1,6 +1,6 @@
 <?php
 
-use TCG\Voyager\Facades\Voyager;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -27,9 +27,7 @@ Route::post('/accueil','IndexController@store');
 
 
 ///////VOYAGER//////////////////
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
+
 
 /////////////////HOME////////////
 Auth::routes();
