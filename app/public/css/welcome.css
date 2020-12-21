@@ -3908,9 +3908,10 @@ input[type=button].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  text-decoration: underline;
 }
 .nav-link:hover, .nav-link:focus {
-  text-decoration: none;
+    text-decoration: underline;
 }
 .nav-link.disabled {
   color: #6c757d;
@@ -3931,6 +3932,7 @@ input[type=button].btn-block {
 }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
   border-color: #e9ecef #e9ecef #dee2e6;
+  text-decoration: underline;
 }
 .nav-tabs .nav-link.disabled {
   color: #6c757d;
@@ -3942,6 +3944,7 @@ input[type=button].btn-block {
   color: #495057;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
+  text-decoration: underline;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
@@ -3956,6 +3959,7 @@ input[type=button].btn-block {
 .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #f4623a;
+  text-decoration: underline;
 }
 
 .nav-fill .nav-item {
@@ -4018,6 +4022,7 @@ input[type=button].btn-block {
 .navbar-nav .nav-link {
   padding-right: 0;
   padding-left: 0;
+  text-decoration: underline;
 }
 .navbar-nav .dropdown-menu {
   position: static;
@@ -4083,6 +4088,7 @@ input[type=button].btn-block {
   .navbar-expand-sm .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
+    text-decoration: underline;
   }
   .navbar-expand-sm > .container,
 .navbar-expand-sm > .container-fluid,
@@ -4125,6 +4131,7 @@ input[type=button].btn-block {
   .navbar-expand-md .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
+    text-decoration: underline;
   }
   .navbar-expand-md > .container,
 .navbar-expand-md > .container-fluid,
@@ -4167,6 +4174,7 @@ input[type=button].btn-block {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
+    text-decoration: underline;
   }
   .navbar-expand-lg > .container,
 .navbar-expand-lg > .container-fluid,
@@ -4209,6 +4217,7 @@ input[type=button].btn-block {
   .navbar-expand-xl .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
+    text-decoration: underline;
   }
   .navbar-expand-xl > .container,
 .navbar-expand-xl > .container-fluid,
@@ -4248,7 +4257,11 @@ input[type=button].btn-block {
 .navbar-expand .navbar-nav .nav-link {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
+  text-decoration: underline;
+
 }
+
+
 .navbar-expand > .container,
 .navbar-expand > .container-fluid,
 .navbar-expand > .container-sm,
@@ -10240,6 +10253,7 @@ header.masthead h1 {
 
 
 
+
 header {
   position: relative;
   background-color: black;
@@ -10431,7 +10445,7 @@ header .overlay {
       }
 }
 
-.rounded-circle
+.caca
 
 {
 min-width: 120px;
@@ -10439,5 +10453,8 @@ min-height: 120px;
 max-width: 120px;
 max-height: 120px;
 box-shadow:0px 0px 2px white;
+filter : blur(20px);
+
 
 }
+

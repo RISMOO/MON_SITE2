@@ -56,19 +56,19 @@
 })(jQuery); // End of use strict
 //////ACCUEIL PROFIL
 $(document).on("ready", () => {
-  
+
 
     $("#edit2").on("click", function(){
       $("#edit").modal();
     });
   });
-  
+
   $(document).on("ready", function(){
     $("#edit2").on("click", function(){
       $("#edit").modal();
     });
   });
- 
+
 
   $('.carousel').carousel({
     interval: 2000
@@ -94,11 +94,11 @@ $(document).on("ready", () => {
     });
   });
 
-  
+
 //////ACCEUIL DASBOARD///////////
   window.setTimeout(function () {
     $("#myHome").modal("show");
-    
+
 }, 1000);
 
 $("#myBtn").on('click',() => {
@@ -118,7 +118,7 @@ $( "#hide" ).click(function() {
 $( "#clos" ).click(function() {
     $( "#tab" ).show(function() {
     });
-    
+
   });
 
 
@@ -126,9 +126,9 @@ $( "#clos" ).click(function() {
     $( "#tab" ).show(function() {
 
     });
-    
+
   });
- 
+
 
   $('#formation').click(function(){
     $('#formation1').show(1000, function(){
@@ -169,7 +169,7 @@ $( "#clos" ).click(function() {
     });
   });
 
- 
+
 
 
   $( "#cacheEdit" ).click(function() {
@@ -184,14 +184,14 @@ $( "#clos" ).click(function() {
     });
   });
 
- 
+
   $( "#afficheTab" ).click(function() {
     $( "#affi" ).show(function() {
-     
+
     });
   });
 
- 
+
    //SECTION MESSAGES//////////////////
   $('#moi').click(function(){
     $('#ris').show(1000, function(){
@@ -235,7 +235,7 @@ $( "#afficheBoutton" ).click(function() {
 
   $( "#voir" ).on('click',function() {
     $( "#boutonEcrireMessage" ).show(function() {
-      
+
       // Animation complete.
     });
   });
@@ -244,7 +244,7 @@ $( "#afficheBoutton" ).click(function() {
 $(function() {
 for( let i in messages){
   console.log("#voirEdit" + messages[i].id);
-  
+
     $("#voirEdit" + messages[i].id).on("click", () => {
       $("#edit" + messages[i].id).modal();
     });
@@ -255,7 +255,7 @@ for( let i in messages){
 $(document).ready(function(){
   $("#connecter").click(function(){
     $(".modal").addClass(".modal");
-  
+
   });
 });
 
@@ -266,9 +266,9 @@ const myBtn= document.getElementById("myBtn");
 
 window.setTimeout(function()
 {
-   
+
     myBtn.style.display = "block";
-  
+
  }, 1000)
 
 
@@ -289,13 +289,13 @@ $( '#propos' ).click(function() {
 
 $('#competences').on('click',() =>{
   $('#competencebar').toggle(1500,() =>{
-  
+
   });
 });
 
 $('#softskills').on('click',() =>{
   $('#carousel').show(1500,() =>{
-  
+
   });
 });
 
@@ -303,16 +303,43 @@ $('#softskills').on('click',() =>{
 
 $('#expe').on('click',() =>{
   $('#expe1').toggle(1500,() =>{
-  
+
   });
 });
 
 
 $('#formations').on('click',() =>{
   $('#forma1').toggle(1500,() =>{
-  
+
   });
 });
 
+// MDB Lightbox Init
 
 
+$(document).ready(function($){
+  $('.button-collapse').sideNav();//on appele la fonction nav bar
+  $('.parallax').parallax();//on appele la fonction parallax
+
+
+  $('select').material_select();///toutes les balises select du html
+
+
+
+    $('.modal').modal();
+
+    var options=[{
+     selector:"#infobulle", offset:300, callback:'Materialize.toast("Merci de me laisser un message",3500)'//message a afiicher
+
+    }];
+    Materialize.scrollFire(options);//fera apparaitre mon info bulle en paramettte de la fonction options
+
+
+
+    document.getElementById('mess').innerHTML = "";
+
+    setTimeout(function() {
+      document.getElementById('mess').innerHTML = "Contactez-moi";
+    },2000);
+
+  });
