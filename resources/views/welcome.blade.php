@@ -74,7 +74,7 @@
                     </div><br>
 
                     <div class="col-lg-8 align-self-baseline">
-                   <h1 class="joy" style="display:none"> DE FIN D'ANNEE<br><br>
+                   <h1 class="joy"style="display:none"> DE FIN D'ANNEE<br><br>
                    <img class="images" style="display:none" src="https://img.icons8.com/color/40/000000/gift--v2.png w-100 hover-shadow "/> A TOUS <img class="images" style="display:none" src="https://img.icons8.com/color/40/000000/gift--v2.png"/>
                 </h1>
                     </div>

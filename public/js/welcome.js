@@ -9,11 +9,12 @@ const rismo = document.getElementById("rismo");
 window.setTimeout(function()
 
 {
-
+  
     cont.style.display = "block";
     bienvenue.style.color = "red";
     img.style.display="block";
     bienvenue.innerHTML ="block";
+
 
 
  }, 1000)
