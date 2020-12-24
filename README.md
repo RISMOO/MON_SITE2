@@ -7,7 +7,7 @@
 * Jquery
 
 ***
-[![rismo.fr](https://zupimages.net/up/20/52/lwwq.png)](https://player.vimeo.com/video/493359966)
+[![rismo.fr](https://zupimages.net/up/20/52/lwwq.png)](https://rismo.fr)
 
 
 
