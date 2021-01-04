@@ -61,29 +61,35 @@
                       <source src="{{asset('images/noel4.mp4')}}"type="video/mp4">
                    </video>
                   </div>
-                <div class="container h-100">
-                 <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="container cent">
+                 <div class="row align-items-center justify-content-center text-center">
 
                      <h1 class="joy" style="display:none" id="bienvenue">
-                    JOYEUSES FÊTES
+                    MEILLEURS VOEUX
 </h1><br><br>
 
          <div class="col-lg-8 align-self-baseline">
-                      <a href="/accueil"><img id="moiProfil" class="rounded-circle moiprofil mt-2 mb-2 w-100 hover-shadow " style="display:none" src="{{asset('images/moiprofil.jpg')}}" alt="avatar" /></a>
+                      <a href="/accueil"><img id="moiProfil" class="rounded-circle moiprofil mt-2 mb-2 w-100 hover-shadow rotate" style="display:none" src="{{asset('images/moiprofil.jpg')}}" alt="avatar" /></a>
 
                     </div><br>
 
                     <div class="col-lg-8 align-self-baseline">
-                   <h1 class="joy"style="display:none"> DE FIN D'ANNEE<br><br>
-                   <img class="images" style="display:none" src="https://img.icons8.com/color/40/000000/gift--v2.png w-100 hover-shadow "/> A TOUS <img class="images" style="display:none" src="https://img.icons8.com/color/40/000000/gift--v2.png"/>
+                   <h1 class="joy"style="display:none">A TOUTES ET TOUS<br><br>
+
                 </h1>
+                <div class="text-center mt-5">
+                    <h2 class="" style="display:none;color:black">rismo<span class="font-weight-bold point">.</span><span class="">fr</span></h2>
+
+
+                  </div>
                     </div>
-                  <!--  <div class="glob-player">-->
+                  <!--  <div class="glob-player"
                         <div class="glob-btn mt-5" id="zic" style="display:none" >
                             <span class="amplitude-prev btn btn-danger hover-shadow" data-toggle="tooltip"><i class="fa fa-step-backward" aria-hidden="true"></i></span>
                             <span class="btn amplitude-play-pause btn btn-danger hover-shadow" amplitude-main-play-pause="true"><i class="fa fa-play" aria-hidden="true"></i> <i class="fa fa-pause" aria-hidden="true"></i></span>
                             <span class="my-next-btn amplitude-next btn btn-danger hover-shadow"><i class="fa fa-step-forward" aria-hidden="true"></i></span>
                         </div>
+                    -->
                      <!--   <div>
                             <div class="meta-name" amplitude-song-info="name" amplitude-main-song-info="true"></div>
                             <progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
@@ -91,7 +97,7 @@
                 <!--    </div> -->
 
                     <div class="col-lg-10 align-self-end mt-5">
-                        <h2 class="" style="display:none;color:black" id="rismo">rismo<span class="font-weight-bold point">.</span><span class="">fr</span></h1>
+                        <h2 class="" style="display:none;color:black" id="rismo">rismo<span class="font-weight-bold point">.</span><span class="">fr</span></h2>
 
 
                       </div>

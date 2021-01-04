@@ -9,7 +9,7 @@ const rismo = document.getElementById("rismo");
 window.setTimeout(function()
 
 {
-  
+
     cont.style.display = "block";
     bienvenue.style.color = "red";
     img.style.display="block";
@@ -39,7 +39,7 @@ window.setTimeout(function()
 
 
 
-   vid.setAttribute('src',"images/sapin.mov");
+
    rismo.style.color="white";
    cont.style.display = "none";
    bienvenue.innerHTML ="block";
@@ -73,7 +73,7 @@ window.setTimeout(function()
 
   $(document).ready(function(){
     setTimeout(function(){
-    $("#moiProfil").attr("src","images/noel.jpg");
+   
 
     $("#zic").slideUp(2000).slideDown(2000);
 
