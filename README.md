@@ -1,13 +1,26 @@
+
 ## Site Web Réalisé en Laravel 
 #### Ce site sert de support pour afficher mes applications réalisées dans le temps.
-> - [rismo.fr](https://rismo.fr/)
+
 ***
+## START
+     composer create-project laravel/laravel firstProjet
+    
+
+## RUN
+     cd firstProjet
+     php artisan serve
+
 ## Animations de la page d'acceuil 
 * Javascript
 * Jquery
 
 ***
-[![rismo.fr](https://zupimages.net/up/20/52/lwwq.png)](https://rismo.fr)
 
+## DEMO
+![](/laravel.webp)
+
+
+> - [rismo.fr](https://rismo.fr/)
 
 
